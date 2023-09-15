@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'BaseButton': typeof import("../components/baseButton.vue")['default']
+    'BaseInput': typeof import("../components/baseInput.vue")['default']
     'BlockContent': typeof import("../components/blockContent.vue")['default']
     'Blogsection': typeof import("../components/blogsection.vue")['default']
     'Hero': typeof import("../components/hero.vue")['default']
@@ -31,6 +32,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyBaseButton': typeof import("../components/baseButton.vue")['default']
+    'LazyBaseInput': typeof import("../components/baseInput.vue")['default']
     'LazyBlockContent': typeof import("../components/blockContent.vue")['default']
     'LazyBlogsection': typeof import("../components/blogsection.vue")['default']
     'LazyHero': typeof import("../components/hero.vue")['default']
@@ -63,6 +65,7 @@ declare module 'vue' {
 }
 
 export const BaseButton: typeof import("../components/baseButton.vue")['default']
+export const BaseInput: typeof import("../components/baseInput.vue")['default']
 export const BlockContent: typeof import("../components/blockContent.vue")['default']
 export const Blogsection: typeof import("../components/blogsection.vue")['default']
 export const Hero: typeof import("../components/hero.vue")['default']
@@ -92,6 +95,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyBaseButton: typeof import("../components/baseButton.vue")['default']
+export const LazyBaseInput: typeof import("../components/baseInput.vue")['default']
 export const LazyBlockContent: typeof import("../components/blockContent.vue")['default']
 export const LazyBlogsection: typeof import("../components/blogsection.vue")['default']
 export const LazyHero: typeof import("../components/hero.vue")['default']

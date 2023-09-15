@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
   ],
   sanity: {
-    projectId: 'oqvpwoxz'
+    projectId: 'u1awq07g',
+    apiVersion: '2022-03-25'
   }
 })

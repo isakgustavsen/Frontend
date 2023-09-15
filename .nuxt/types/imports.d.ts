@@ -26,6 +26,7 @@ declare global {
   const defineSlots: typeof import('vue')['defineSlots']
   const effect: typeof import('vue')['effect']
   const effectScope: typeof import('vue')['effectScope']
+  const formatDate: typeof import('../../utils/index')['formatDate']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const groq: typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/groq')['groq']
@@ -107,6 +108,7 @@ declare global {
   const useModel: typeof import('vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/nuxt/dist/app')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/nuxt/dist/app')['useNuxtData']
+  const useNuxtDevTools: typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePinia: typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']
   const useRequestEvent: typeof import('../../node_modules/nuxt/dist/app')['useRequestEvent']
   const useRequestFetch: typeof import('../../node_modules/nuxt/dist/app')['useRequestFetch']
@@ -116,6 +118,7 @@ declare global {
   const useRouter: typeof import('../../node_modules/nuxt/dist/app')['useRouter']
   const useRuntimeConfig: typeof import('../../node_modules/nuxt/dist/app')['useRuntimeConfig']
   const useSanity: typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanity']
+  const useSanityData: typeof import('../../composables/useSanityData')['default']
   const useSanityQuery: typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanityQuery']
   const useSeoMeta: typeof import('@unhead/vue')['useSeoMeta']
   const useServerHead: typeof import('@unhead/vue')['useServerHead']
@@ -169,6 +172,7 @@ declare module 'vue' {
     readonly defineSlots: UnwrapRef<typeof import('vue')['defineSlots']>
     readonly effect: UnwrapRef<typeof import('vue')['effect']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly formatDate: UnwrapRef<typeof import('../../utils/index')['formatDate']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly groq: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/groq')['groq']>
@@ -250,6 +254,7 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePinia: UnwrapRef<typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRequestFetch']>
@@ -259,6 +264,7 @@ declare module 'vue' {
     readonly useRouter: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRouter']>
     readonly useRuntimeConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRuntimeConfig']>
     readonly useSanity: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanity']>
+    readonly useSanityData: UnwrapRef<typeof import('../../composables/useSanityData')['default']>
     readonly useSanityQuery: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanityQuery']>
     readonly useSeoMeta: UnwrapRef<typeof import('@unhead/vue')['useSeoMeta']>
     readonly useServerHead: UnwrapRef<typeof import('@unhead/vue')['useServerHead']>
@@ -306,6 +312,7 @@ declare module '@vue/runtime-core' {
     readonly defineSlots: UnwrapRef<typeof import('vue')['defineSlots']>
     readonly effect: UnwrapRef<typeof import('vue')['effect']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly formatDate: UnwrapRef<typeof import('../../utils/index')['formatDate']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly groq: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/groq')['groq']>
@@ -387,6 +394,7 @@ declare module '@vue/runtime-core' {
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePinia: UnwrapRef<typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables')['usePinia']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRequestFetch']>
@@ -396,6 +404,7 @@ declare module '@vue/runtime-core' {
     readonly useRouter: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRouter']>
     readonly useRuntimeConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useRuntimeConfig']>
     readonly useSanity: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanity']>
+    readonly useSanityData: UnwrapRef<typeof import('../../composables/useSanityData')['default']>
     readonly useSanityQuery: UnwrapRef<typeof import('../../node_modules/@nuxtjs/sanity/dist/runtime/composables')['useSanityQuery']>
     readonly useSeoMeta: UnwrapRef<typeof import('@unhead/vue')['useSeoMeta']>
     readonly useServerHead: UnwrapRef<typeof import('@unhead/vue')['useServerHead']>

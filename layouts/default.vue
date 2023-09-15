@@ -17,8 +17,8 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a v-for="item in navigation" :key="item.name" :href="item.href"
-            class="text-sm font-semibold leading-6 text-gray-100">{{ item.name }}</a>
+          <NuxtLink v-for="item in navigation" :key="item.name" :to="item.href"
+            class="text-sm font-semibold leading-6 text-gray-100">{{ item.name }}</NuxtLink>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -85,10 +85,17 @@ import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { defineComponent, h } from 'vue'
 
+const query = groq`*[_type == 'frontPage']{
+  title,
+  "logo": logo.asset->url,
+  "imageAlt": mainImage.alt,
+  body,
+}`;
+const { data } = useSanityQuery(query);
+
 const logo = [
   { image: '~/assets/images/logo.png', alt: 'DebutUKA i Tromsø' }
 ]
-
 const navigation = [
   { name: 'Hjem', href: '/' },
   { name: 'Arrangementer', href: 'events' },
