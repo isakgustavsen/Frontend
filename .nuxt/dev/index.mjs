@@ -121,6 +121,9 @@ const _inlineRuntimeConfig = {
     "routeRules": {
       "/__nuxt_error": {
         "cache": false
+      },
+      "/confirm": {
+        "ssr": false
       }
     }
   },
@@ -134,9 +137,36 @@ const _inlineRuntimeConfig = {
       "token": "",
       "perspective": "raw",
       "additionalClients": {}
+    },
+    "supabase": {
+      "url": "https://mbacqscgaehejrjwdbht.supabase.co",
+      "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1iYWNxc2NnYWVoZWpyandkYmh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ4Njc3OTMsImV4cCI6MjAxMDQ0Mzc5M30.P-HJ4qjWIFUM_hkxH9JdGvHJGzbev7G0sT0Dp4YRcEk",
+      "redirect": true,
+      "redirectOptions": {
+        "login": "/auth",
+        "callback": "/confirm",
+        "exclude": []
+      },
+      "cookieName": "sb",
+      "cookieOptions": {
+        "maxAge": 28800,
+        "sameSite": "lax",
+        "secure": true
+      },
+      "clientOptions": {
+        "auth": {
+          "flowType": "pkce",
+          "detectSessionInUrl": true,
+          "persistSession": true,
+          "autoRefreshToken": true
+        }
+      }
     }
   },
-  "sanity": {}
+  "sanity": {},
+  "supabase": {
+    "serviceKey": ""
+  }
 };
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";

@@ -28,7 +28,5 @@ const query = groq`*[_type == 'frontPage']{
     heroText,
 }`;
   const { data } = useSanityQuery(query);
-
-  console.log(data);
-
+  
 </script>

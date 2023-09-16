@@ -17,11 +17,11 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <NuxtLink v-for="item in navigation" :key="item.name" :to="item.href"
+          <NuxtLink v-for="item in navigation" :to="item.href"
             class="text-sm font-semibold leading-6 text-gray-100">{{ item.name }}</NuxtLink>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-100">Log in <span aria-hidden="true">&rarr;</span></a>
+          <NuxtLink to="/auth" class="text-sm font-semibold leading-6 text-gray-100">Log in <span aria-hidden="true">&rarr;</span></NuxtLink>
         </div>
       </nav>
       <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -41,14 +41,14 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/25">
               <div class="space-y-2 py-6">
-                <a v-for="item in navigation" :key="item.name" :href="item.href"
+                <NuxtLink v-for="item in navigation" :to="item.href"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800">{{
-                    item.name }}</a>
+                    item.name }}</NuxtLink>
               </div>
               <div class="py-6">
-                <a href="#"
+                <NuxtLink to="/auth"
                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800">Log
-                  in</a>
+                  in</NuxtLink>
               </div>
             </div>
           </div>
@@ -98,8 +98,8 @@ const logo = [
 ]
 const navigation = [
   { name: 'Hjem', href: '/' },
-  { name: 'Arrangementer', href: 'events' },
-  { name: 'Om Fadderuka', href: 'about' },
+  { name: 'Arrangementer', href: '/events' },
+  { name: 'Om Fadderuka', href: '/about' },
   { name: 'Kontakt oss', href: '#' },
 ]
 

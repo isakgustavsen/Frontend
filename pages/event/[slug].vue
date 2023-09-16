@@ -4,7 +4,7 @@
     <div v-for="event in data" :key="event._id">
     <div class="mt-16 mx-auto w-10/12 grid grid-cols-5 justify-items-fill">
         <div class="w-full col-span-full">
-            <NuxtImg :src="event.imageUrl" :alt="event.imageAlt" alt="Utsolgt" class="rounded-lg" />
+            <NuxtImg :src="event.imageUrl" :alt="event.imageAlt" class="rounded-lg" />
         </div>
     </div>
     <div
@@ -20,11 +20,11 @@
             <div class="space-y-3">
                 <p class="">
                     <CalendarDaysIcon class="w-6 h-6 inline-block mr-2" aria-hidden="true" />
-                    {{ event.date }}
+                    {{ event.datetime ? useDate(event.datetime) : ''}}
                 </p>
                 <p class="">
                     <ClockIcon class="w-6 h-6 inline-block mr-2" aria-hidden="true" />
-                    {{ event.time }}
+                    {{ event.datetime ? useTime(event.datetime) : '' }}
                 </p>
                 <p class="">
                     <MapIcon class="w-6 h-6 inline-block mr-2" aria-hidden="true" />
@@ -56,8 +56,9 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 import { CalendarDaysIcon, ClockIcon, MapIcon, TicketIcon } from '@heroicons/vue/24/outline';
+import moment from 'moment';
 
 const route = useRoute();
 
@@ -67,6 +68,7 @@ const query = groq`*[
     ]
     {
   title,
+  tags,
   datetime,
   location->{
     title,
@@ -79,6 +81,7 @@ const query = groq`*[
   },
   body,}`;
 const { data } = useSanityQuery(query);
+
 
 
 

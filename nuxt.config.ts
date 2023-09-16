@@ -8,13 +8,14 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/sanity',
     '@pinia/nuxt',
+    '@nuxtjs/supabase',
   ],
-
   css: [
     '@/assets/css/main.css',
   ],
   sanity: {
     projectId: 'u1awq07g',
     apiVersion: '2022-03-25'
-  }
+  },
+
 })
