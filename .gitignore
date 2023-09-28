@@ -1,3 +1,4 @@
-node_modules
+.node_modules
 node_modules
 .vercel
+node_modules/zhead/package.json
