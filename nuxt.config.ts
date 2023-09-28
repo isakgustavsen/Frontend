@@ -9,13 +9,19 @@ export default defineNuxtConfig({
     '@nuxtjs/sanity',
     '@pinia/nuxt',
     '@nuxtjs/supabase',
+    '@formkit/nuxt',
   ],
   css: [
     '@/assets/css/main.css',
   ],
   sanity: {
     projectId: 'u1awq07g',
-    apiVersion: '2022-03-25'
+    apiVersion: '2022-03-25',
+    useCdn: true,
+  },
+  supabase: {
+    redirect: false,
+
   },
 
 })
