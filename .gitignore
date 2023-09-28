@@ -1,2 +1,4 @@
 node_modules
 node_modules
+node_modules/.cache/vite/client/deps/pinia.js
+*.map

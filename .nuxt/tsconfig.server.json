@@ -8,72 +8,78 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        "./.."
       ],
       "~/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "@": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        "./.."
       ],
       "@/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "~~": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        "./.."
       ],
       "~~/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "@@": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        "./.."
       ],
       "@@/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "assets": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/public/*"
+        "../public/*"
       ],
       "#color-mode-options": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/color-mode-options"
+        "./color-mode-options"
       ],
       "#image": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxt/image/dist/runtime"
+        "../node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxt/image/dist/runtime/*"
+        "../node_modules/@nuxt/image/dist/runtime/*"
       ],
       "pinia": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/pinia/dist/pinia"
+        "../node_modules/pinia/dist/pinia"
       ],
       "#supabase/server": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxtjs/supabase/dist/runtime/server/services/index"
+        "../node_modules/@nuxtjs/supabase/dist/runtime/server/services/index"
       ]
     }
   },
   "include": [
-    "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }
