@@ -1,4 +1,10 @@
+.node_modules
 node_modules
+<<<<<<< HEAD
+.vercel
+node_modules/zhead/package.json
+=======
 node_modules
 node_modules/.cache/vite/client/deps/pinia.js
 *.map
+>>>>>>> main
