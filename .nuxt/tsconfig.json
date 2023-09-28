@@ -3,111 +3,106 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "strict": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
     "allowJs": true,
-    "baseUrl": "/Users/isakgustavsen/Github/debutuka/Frontend",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
     "paths": {
       "~": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        ".."
       ],
       "~/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "@": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        ".."
       ],
       "@/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "~~": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        ".."
       ],
       "~~/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "@@": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend"
+        ".."
       ],
       "@@/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+        "../*"
       ],
       "assets": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/public/*"
+        "../public/*"
       ],
       "#app": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/nuxt/dist/app"
+        "../node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/nuxt/dist/app/*"
+        "../node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/nuxt/dist/app/compat/vue-demi"
+        "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#color-mode-options": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/color-mode-options"
+        "./color-mode-options.mjs"
       ],
       "#image": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxt/image/dist/runtime"
+        "../node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxt/image/dist/runtime/*"
+        "../node_modules/@nuxt/image/dist/runtime/*"
       ],
       "pinia": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/pinia/dist/pinia"
+        "../node_modules/pinia/dist/pinia"
       ],
       "#vue-router": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/vue-router"
+        "./vue-router"
       ],
       "#imports": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/imports"
+        "./imports"
       ],
       "#build": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt"
+        "."
       ],
       "#build/*": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/*"
+        "./*"
       ],
       "#sanity-client": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/node_modules/@nuxtjs/sanity/dist/runtime/client"
+        "../node_modules/@nuxtjs/sanity/dist/runtime/client"
       ],
       "#components": [
-        "/Users/isakgustavsen/Github/debutuka/Frontend/.nuxt/components"
+        "./components"
       ]
     }
   },
   "include": [
     "./nuxt.d.ts",
     "../**/*",
-    "../**/*",
-    "/Users/isakgustavsen/Github/debutuka/Frontend",
-    "/Users/isakgustavsen/Github/debutuka/Frontend/*",
-    "/Users/isakgustavsen/Github/debutuka/Frontend",
-    "/Users/isakgustavsen/Github/debutuka/Frontend/*",
-    "/Users/isakgustavsen/Github/debutuka/Frontend",
-    "/Users/isakgustavsen/Github/debutuka/Frontend/*",
-    "/Users/isakgustavsen/Github/debutuka/Frontend",
-    "/Users/isakgustavsen/Github/debutuka/Frontend/*"
+    ".."
   ],
   "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
     "../dist",
     "../.output"
   ]

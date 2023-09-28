@@ -14,12 +14,12 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server").default> &
   InjectionType<typeof import("../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client").default> &
-  InjectionType<typeof import("../../node_modules/@nuxtjs/supabase/dist/runtime/plugins/auth-redirect").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/supabase/dist/runtime/plugins/supabase.server").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/supabase/dist/runtime/plugins/supabase.client").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/color-mode/dist/runtime/plugin.server").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/color-mode/dist/runtime/plugin.client").default> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client").default>
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
+  InjectionType<typeof import("../../plugins/sanityImage").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
